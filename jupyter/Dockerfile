@@ -19,4 +19,5 @@ RUN echo "export PATH=$PATH:/home/user/google-cloud-sdk/bin/" >> /home/user/.bas
 
 EXPOSE 4040 8080 8888
 
-ENTRYPOINT [ "jupyter notebook --no-browser" ]
+ENTRYPOINT [ "jupyter" ]
+CMD [ "notebook",  "--ip=0.0.0.0", "--no-browser",  "--NotebookApp.token=''", "--allow-root" ]
