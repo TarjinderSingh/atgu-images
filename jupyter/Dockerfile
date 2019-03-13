@@ -17,6 +17,6 @@ RUN curl -sSL https://sdk.cloud.google.com | bash \
 ENV PATH $PATH:/home/user/google-cloud-sdk/bin/
 RUN echo "export PATH=$PATH:/home/user/google-cloud-sdk/bin/" >> /home/user/.bash_profile
 
-EXPOSE 2708 4040 8080 8888
+EXPOSE 4040 8080 8888
 
 ENTRYPOINT [ "jupyter notebook --no-browser" ]
